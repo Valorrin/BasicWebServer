@@ -62,11 +62,20 @@ Content-Length: {contentLength}
             var bufferLength = 1024;
             var buffer = new byte[bufferLength];
 
+            var totalBytes = 0;
+
             var requestBuilder = new StringBuilder();
 
             do
             {
                 var bytesRead = networkStream.Read(buffer, 0, bufferLength);
+
+                totalBytes += bytesRead;
+
+                if (totalBytes > 10 * 1024)
+                {
+                    throw new InvalidOperationException("Request is too large.");
+                }
 
                 requestBuilder.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
 
