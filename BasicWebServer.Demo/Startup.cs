@@ -1,10 +1,8 @@
-﻿
-
-using BasicWebServer.Server;
+﻿using BasicWebServer.Server;
 
 namespace MyWebServer.Demo
 {
-    internal class Program
+    public class Startup
     {
         static void Main()
         {

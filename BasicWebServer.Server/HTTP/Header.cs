@@ -15,5 +15,11 @@ namespace BasicWebServer.Server.HTTP
 
         public string Name { get; set; }
         public string Value { get; set; }
+
+        public const string ContentType = "Content-Type";
+        public const string ContentLeghth = "Content-Lenght";
+        public const string Date = "Date";
+        public const string Location = "Location";
+        public const string Server = "Server";
     }
 }
