@@ -2,9 +2,9 @@
 
 namespace BasicWebServer.Server.Responses
 {
-    public class NotFoundRequest : Response
+    public class NotFoundResponse : Response
     {
-        public NotFoundRequest()
+        public NotFoundResponse()
             : base(StatusCode.NotFound)
         {
 
